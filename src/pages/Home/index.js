@@ -7,7 +7,7 @@ import Carousel from '../../components/Carousel';
 
 function Home() {
 	return (
-		<PageBase>
+		<PageBase typeButton='Link'>
 
 			<BannerMain
 				videoTitle={dadosIniciais.categorias[0].videos[0].titulo}

@@ -13,10 +13,10 @@ const  Main = styled.main`
 	padding-right: 5%;
 `;
 
-export default function PageBase({ children }) {
+export default function PageBase({ children, typeButton }) {
 	return (
 		<>
-			<Menu />
+			<Menu typeButton={typeButton}/>
 
 			<Main>
 				{children}

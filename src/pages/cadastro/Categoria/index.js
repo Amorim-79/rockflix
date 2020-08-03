@@ -1,27 +1,54 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+
 import PageBase from '../../../components/PageBase';
+import FormGenerator from '../../../components/FormGenerator';
 
 export default function CadastroCategoria() {
+	const initialValues = {
+		name: '',
+		description: '',
+		color: '#000',
+	}
+
+	const [formData, setFormData] = useState(initialValues)
+
+	function handleInputChange(e) {
+        const { name, value } = e.target
+
+        setFormData({ ...formData, [name]: value })
+    }
+
 	return (
 		<PageBase>
-			<h1>Cadastro de Categoria</h1>
-
-			<form>
-				<label>
-					Nome da Categoria:
-          			<input type="text" />
-				</label>
-
-				<button>
-					Cadastrar
-        		</button>
-			</form>
-
-
-			<Link to="/">
-				Ir para home
-      		</Link>
+			
+			<FormGenerator 
+			title='Nova Categoria'
+			props= {
+				[
+					{
+						label: 'Nome',
+						name: 'name',
+						type: 'text',
+						required: true,
+						onChange: handleInputChange,
+					},
+					{
+						label: 'Descrição',
+						name: 'description',
+						type: 'textarea',
+						required: false,
+						onChange: handleInputChange,
+					},
+					{
+						label: 'Cor',
+						name: 'color',
+						type: 'color',
+						required: false,
+						onChange: handleInputChange,
+					}
+				]
+			}
+			/>
 		</PageBase>
 	)
 }

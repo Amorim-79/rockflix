@@ -1,11 +1,13 @@
 import React from 'react';
 import { FooterBase } from './styles';
 
+import LogoAmorim from '../../assets/img/newLogoAmorim 1.svg';
+
 function Footer() {
   return (
     <FooterBase>
-      <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+      <a href="https://portfolio-amorim.herokuapp.com/" target='_blank' rel="noopener noreferrer">
+        <img src={LogoAmorim} alt="Logo Amorim" />
       </a>
       <p>
         Orgulhosamente criado durante a
