@@ -64,9 +64,9 @@ function InputSelect(label, name, required, onChange, options) {
 			{label}
 			<InputSelectStyled name={name} required={required} onChange={onChange}>
 				{options.map((option, index) => (
-					<InputSelectStyled.Option key={index} value={option.value}>
+					<option key={index} value={option.value}>
 						{option.key}
-					</InputSelectStyled.Option>
+					</option>
 				))}
 			</InputSelectStyled>
 		</InputLabelStyled>
@@ -83,47 +83,51 @@ InputGenerator.propTypes = {
 };
 
 const InputLabelStyled = styled.label`
-  font-weight: bold;
-  color: #FFF;
+	font-weight: bold;
+	color: #FFF;
 `;
 
 const InputTextStyled = styled.input`
-   display: block;
-   min-height: 40px;
-   width: 300px;
-   margin-bottom: 20px;
-   padding: 5px;
-   border-radius: 6px;
-   border: 0;
-   line-height: 16px;
+	display: block;
+	min-height: 40px;
+	width: 300px;
+	margin-bottom: 20px;
+	padding: 5px;
+	border-radius: 6px;
+	border: 0;
+	line-height: 16px;
 `;
 
 const InputColorStyled = styled.input`
-    display: block;
-   min-height: 40px;
-   width: 300px;
-   margin-bottom: 20px;
-   padding: 5px;
-   border-radius: 6px;
-   border: 0;
+	display: block;
+	min-height: 40px;
+   	width: 100px;
+	margin-bottom: 20px;
+	margin-right: 200px;   
+   	padding: 5px;
+   	border-radius: 6px;
+   	border: 0;
 `;
 
 const InputTextAreaStyled = styled.textarea`
-   min-height: 80px;
-   display: block;
-   width: 300px;
-   margin-bottom: 20px;
-   padding: 5px;
-   border-radius: 6px;
-   border: 0;
-   line-height: 16px;
-   resize: none;
+	min-height: 80px;
+	display: block;
+	width: 300px;
+	margin-bottom: 20px;
+	padding: 5px;
+	border-radius: 6px;
+	border: 0;
+	line-height: 16px;
+	resize: none;
 `;
 
 const InputSelectStyled = styled.select`
-
-`;
-
-InputSelectStyled.Option = styled.option`
-
+	display: block;
+	min-height: 40px;
+	width: 300px;
+	margin-bottom: 20px;
+	padding: 5px;
+	border-radius: 6px;
+	border: 0;
+	line-height: 16px;
 `;

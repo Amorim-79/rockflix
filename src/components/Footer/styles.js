@@ -14,3 +14,9 @@ export const FooterBase = styled.footer`
     margin-bottom: 30px;
   }
 `;
+
+FooterBase.Title = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

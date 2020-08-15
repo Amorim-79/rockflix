@@ -38,6 +38,7 @@ FormStyled.Title = styled.h1`
 
 FormStyled.Button = styled.button`
 	background-color: var(--primary);
+	margin-left: 200px;
 	color: #FFF;
 	font-weight: bold;
 	text-transform: uppercase;

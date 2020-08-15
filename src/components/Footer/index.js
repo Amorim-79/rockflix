@@ -1,4 +1,6 @@
 import React from 'react';
+import { FiHeart } from 'react-icons/fi';
+
 import { FooterBase } from './styles';
 
 import LogoAmorim from '../../assets/img/newLogoAmorim 1.svg';
@@ -9,13 +11,10 @@ function Footer() {
       <a href="https://portfolio-amorim.herokuapp.com/" target='_blank' rel="noopener noreferrer">
         <img src={LogoAmorim} alt="Logo Amorim" />
       </a>
-      <p>
-        Orgulhosamente criado durante a
-        {' '}
-        <a href="https://www.alura.com.br/">
-          Imersão React da Alura
-        </a>
-      </p>
+      <FooterBase.Title>
+        Desenvolvido escutando o melhor do Rock
+        <FiHeart size={24} color={'#7159c1'} style={{marginLeft: 5}} />
+      </FooterBase.Title>
     </FooterBase>
   );
 }

@@ -45,6 +45,11 @@ export default function CadastroVideo() {
 						type: 'select',
 						required: true,
 						onChange: handleInputChange,
+						options: [
+							{ key: '70s', value: 70 },
+							{ key: '80s', value: 80 },
+							{ key: '90s', value: 90 },
+						],
 					}
 				]
 			}

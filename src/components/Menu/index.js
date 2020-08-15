@@ -14,7 +14,7 @@ export default function Menu({typeButton}) {
                 <img className="Logo" src={Logo} alt="RockFlix Logo"/>
             </Link>
             {typeButton === 'Link' ?
-                <div>
+                <div className="button-group">
                     <ButtonLink className="ButtonLink" to='/cadastro/video' >
                         Novo Vídeo
                     </ButtonLink> 
