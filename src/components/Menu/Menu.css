@@ -1,9 +1,12 @@
 .Logo {
-    max-width: 168px;
+    font-size: 3.2rem;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+    color: var(--primary);
   }
   @media (max-width: 800px) {
     .Logo {
-      max-width: 105px;
+      font-size: 2rem;
     }
   }
   

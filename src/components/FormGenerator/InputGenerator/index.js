@@ -6,6 +6,8 @@ export default function InputGenerator({ label, type, name, required, onChange, 
 	switch (type) {
 		case 'text':
 			return InputText(label, name, required, onChange);
+		case 'password':
+			return InputPassword(label, name, required, onChange);
 		case 'color':
 			return InputColor(label, name, required, onChange);
 		case 'textarea':
@@ -23,6 +25,20 @@ function InputText(label, name, required, onChange) {
 			{label}
 			<InputTextStyled
 				type='text'
+				name={name}
+				required={required}
+				onChange={onChange}
+			/>
+		</InputLabelStyled>
+	);
+}
+
+function InputPassword(label, name, required, onChange) {
+	return (
+		<InputLabelStyled>
+			{label}
+			<InputPasswordStyled
+				type='password'
 				name={name}
 				required={required}
 				onChange={onChange}
@@ -122,6 +138,17 @@ const InputTextAreaStyled = styled.textarea`
 `;
 
 const InputSelectStyled = styled.select`
+	display: block;
+	min-height: 40px;
+	width: 300px;
+	margin-bottom: 20px;
+	padding: 5px;
+	border-radius: 6px;
+	border: 0;
+	line-height: 16px;
+`;
+
+const InputPasswordStyled = styled.input`
 	display: block;
 	min-height: 40px;
 	width: 300px;

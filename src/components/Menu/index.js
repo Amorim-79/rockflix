@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Logo from '../../assets/img/logo.png';
 import './Menu.css';
 
 import ButtonLink from '../ButtonLink';
 import ButtonBack from '../ButtonBack'
 
 export default function Menu({typeButton}) {
+    const title = 'YourFlix';
+
     return (
         <nav className="Menu">
-            <Link to="/">
-                <img className="Logo" src={Logo} alt="RockFlix Logo"/>
+            <Link to="/" className="Logo" >
+                {title}
             </Link>
             {typeButton === 'Link' ?
                 <div className="button-group">
@@ -23,7 +24,7 @@ export default function Menu({typeButton}) {
                     </ButtonLink>
                 </div> :
                 <ButtonBack to='/' >
-                    Voltar para a Home
+                    Voltar
                 </ButtonBack>
             }
         </nav>

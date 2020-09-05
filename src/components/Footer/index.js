@@ -12,8 +12,9 @@ function Footer() {
         <img src={LogoAmorim} alt="Logo Amorim" />
       </a>
       <FooterBase.Title>
-        Desenvolvido escutando o melhor do Rock
-        <FiHeart size={24} color={'#7159c1'} style={{marginLeft: 5}} />
+        Desenvolvido com
+        <FiHeart size={24} color={'#7159c1'} style={{marginLeft: 5, marginRight: 5}} />
+        nas horas vagas
       </FooterBase.Title>
     </FooterBase>
   );
